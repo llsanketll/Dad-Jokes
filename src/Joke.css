@@ -1,0 +1,44 @@
+.Joke {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #eeeeee;
+  padding: 0.2rem;
+  width: 100%;
+}
+
+.JokeButtons {
+  display: grid;
+  place-content: center;
+  width: 15%;
+}
+
+.JokeText {
+  width: 75%;
+  font-size: 0.9rem;
+}
+
+.JokeVotes {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  display: grid;
+  place-content: center;
+  border: 2px solid var(--border);
+  transition: border .5s;
+}
+
+.Joke .fas {
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+.JokeEmoji {
+  font-size: 3vw;
+  transition: 0.5s;
+  margin: 10px auto;
+}
+
+.JokeEmoji:hover {
+  transform: rotateZ(10deg);
+}

@@ -1,0 +1,27 @@
+.Loader-Wrapper{
+  display: grid;
+  place-content: center;
+  position: relative;
+  top: 50%;
+}
+
+.Loader {
+  width: 100px;
+  height: 100px;
+  border: 10px solid rgb(53, 53, 53);
+  border-bottom: 10px solid #3498db;
+  border-radius: 50%;
+  transition: 0.2s;
+  animation: rotate 1s linear infinite, hueRotate 4s linear infinite;
+}
+
+@keyframes hueRotate{
+  to{
+    filter:hue-rotate(360deg);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
