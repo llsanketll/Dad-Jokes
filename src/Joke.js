@@ -21,12 +21,41 @@ export default class Joke extends Component {
     return (
       <li className="Joke">
         <div className="JokeButtons">
-          <i className="fas fa-arrow-up" onClick={this.handleClick} id="1"></i>
-          <div className="JokeVotes" style={{"--border": this.getColor()}}> {this.props.votes} </div>
-          <i
-            className="fas fa-arrow-down"
-            id="-1"
-            onClick={this.handleClick}></i>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            id={1}
+            onClick={this.handleClick}
+            className="feather feather-arrow-up"> 
+            <line x1="12" y1="19" x2="12" y2="5" id="1"></line>
+            <polyline points="5 12 12 5 19 12" id="1"></polyline>
+          </svg>
+          <div className="JokeVotes" style={{ "--border": this.getColor() }}>
+            {this.props.votes}
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            onClick={this.handleClick}
+            id={-1}
+            className="feather feather-arrow-down">
+            <line x1="12" y1="5" x2="12" y2="19" id="-1"></line>
+            <polyline points="19 12 12 19 5 12" id="-1"></polyline>
+          </svg>
         </div>
         <div className="JokeText">{this.props.text}</div>
         <div className="JokeEmoji">
